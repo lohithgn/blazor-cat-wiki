@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32127.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCatWiki", "BlazorCatWiki\BlazorCatWiki.csproj", "{22B6E93C-BEC7-49B0-B5E4-BE0E5538171D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCatWiki.Shared", "BlazorCatWiki.Shared\BlazorCatWiki.Shared.csproj", "{4811732C-D720-4BDB-9ABC-32592372E6ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22B6E93C-BEC7-49B0-B5E4-BE0E5538171D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B6E93C-BEC7-49B0-B5E4-BE0E5538171D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B6E93C-BEC7-49B0-B5E4-BE0E5538171D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B6E93C-BEC7-49B0-B5E4-BE0E5538171D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4811732C-D720-4BDB-9ABC-32592372E6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4811732C-D720-4BDB-9ABC-32592372E6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4811732C-D720-4BDB-9ABC-32592372E6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4811732C-D720-4BDB-9ABC-32592372E6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBFCEDEA-B2FC-4B3B-8EB5-17EA4C310138}
+	EndGlobalSection
+EndGlobal

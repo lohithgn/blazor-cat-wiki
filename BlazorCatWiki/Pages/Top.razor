@@ -1,0 +1,31 @@
+﻿@page "/top"
+
+<PageTitle>Cat Wiki - Top Breeds</PageTitle>
+
+<h1 class="mb-3">Top 10 most searched breeds</h1>
+
+@if(_isBusy)
+{
+	<div class="d-flex justify-content-center align-items-center">
+		<p>Loading breeds...</p>
+	</div>
+}
+else
+{
+	foreach(var breed in _breeds)
+	{
+		<div class="row">
+			<div class="col-lg-3">
+				<img class="img-fluid border shadow my-2" src="@breed.Image.Url" style="height:12rem;width:15rem;border-radius:1.25rem;">
+			</div>
+			<div class="col-lg-9">
+				<h2>@breed.Name</h2>
+				<p>
+					@breed.Description
+				</p>
+			</div>
+		</div>
+	}
+}
+
+

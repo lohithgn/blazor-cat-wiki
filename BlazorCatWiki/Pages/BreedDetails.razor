@@ -1,0 +1,56 @@
+﻿@page "/breed/{BreedName}"
+
+<PageTitle>Cat Wiki - Breed - @BreedName</PageTitle>
+
+@if (_isBusy)
+{
+	<div class="d-flex h-100 align-items-center justify-content-center">
+		<p>Loading @BreedName details ...</p>
+	</div>
+}
+else
+{
+	<div class="row">
+		<div class="col-md-6">
+			<img src="@_images.First().Url" class="img-fluid border border-secondary shadow" style="border-radius:1.25rem" />
+		</div>
+		<div class="col-md-6">
+			<h1>@_breed.Name</h1>
+			<p class="my-4">
+				@_breed.Description
+			</p>
+			<p>
+				<div><b>Temperament:</b><span>@_breed.Temperament</span></div>
+			</p>
+			<p>
+				<div><b>Origin:</b><span>@_breed.Origin</span></div>
+			</p>
+			<p>
+				<div><b>Life Span:</b><span>@_breed.LifeSpan year(s)</span></div>
+			</p>
+			<p>
+				<MetricDisplay Label="Adaptability" Value="@_breed.Adaptability" />
+				<MetricDisplay Label="Affection level" Value="@_breed.AffectionLevel" />
+				<MetricDisplay Label="Child Friendly" Value="@_breed.ChildFriendly" />
+				<MetricDisplay Label="Grooming:" Value="@_breed.Grooming" />
+				<MetricDisplay Label="Intelligence" Value="@_breed.Intelligence" />
+				<MetricDisplay Label="Health issues" Value="@_breed.HealthIssues" />
+				<MetricDisplay Label="Social needs" Value="@_breed.SocialNeeds" />
+				<MetricDisplay Label="Stranger friendly" Value="@_breed.StrangerFriendly" />
+			</p>
+		</div>
+	</div>
+	<p class="my-5">
+		<h1>Other Photos</h1>
+	</p>
+	<div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+		@foreach (var image in _images.Skip(1))
+		{
+			<div class="col text-center p-4">
+				<a href="@image.Url" target="_blank">
+					<img src="@image.Url" class="img-fluid border border-secondary shadow" style="width:14rem;height:14rem;border-radius:1.25rem" />
+				</a>
+			</div>
+		}
+	</div>
+}

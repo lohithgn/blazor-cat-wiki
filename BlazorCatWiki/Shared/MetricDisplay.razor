@@ -1,0 +1,20 @@
+﻿<div class="row py-2">
+	<div class="col-5"><span class="fs-5 fw-bold">@Label:</span></div>
+	<div class="col-7">
+		@for (var counter = 0; counter < Value; counter++)
+		{
+			<i class="bi bi-circle-fill px-2 fs-5"></i>
+		}
+		@for (var counter = 0; counter < 5 - Value; counter++)
+		{
+			<i class="bi bi-circle px-2 fs-5"></i>
+		}
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public int Value { get; set; }
+	[Parameter]
+	public string Label { get; set; }
+}

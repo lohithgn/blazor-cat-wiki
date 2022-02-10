@@ -1,0 +1,10 @@
+﻿<main class="flex-shrink-0 py-3">
+  <div class="container h-100 py-1">
+    @Content
+  </div>
+</main>
+
+@code {
+	[Parameter]
+	public RenderFragment? Content { get; set; }
+}

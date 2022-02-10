@@ -1,0 +1,21 @@
+﻿<div class="h6 mb-4">Most Searched Breeds</div>
+<div class="d-flex justify-content-between">
+	<h1 class="display-5 fw-bold">66+ Breeds for you to discover</h1>
+	<a href="top" class="text-decoration-none text-dark fw-bold">See more <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+	@foreach (var breed in Breeds)
+	{
+		<div class="col text-center p-4">
+			<a href="/breed/@breed.Name" class="text-decoration-none">
+				<img class="img-fluid border border-secondary shadow summary-img" src="@breed.Image.Url" />
+				<p class="text-center text-dark h5 pt-2">@breed.Name</p>
+			</a>
+		</div>
+	}
+</div>
+
+@code {
+	[Parameter]
+	public IList<Breed> Breeds { get; set; } = new List<Breed>();
+}
